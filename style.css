@@ -1,0 +1,97 @@
+/* Reset default spacing and ensure consistent sizing across all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the full page always fills the screen */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main heading style */
+.heading {
+    font-family: "Poppins", sans-serif;
+    /* Clean modern font */
+    font-weight: 600;
+    font-size: 4rem;
+    /* Large desktop heading */
+    color: rgb(1, 1, 88);
+    /* Deep navy tone */
+    filter: drop-shadow(5px 5px 10px #818181);
+    /* Soft glow/shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* Smooth hover animation */
+}
+
+/* Subtle hover effect for the heading */
+.heading:hover {
+    transform: scale(1.03);
+    /* Gently enlarge */
+}
+
+/* Ensure movie grid columns remain visually consistent */
+.column {
+    min-height: 19rem;
+    height: 100%;
+}
+
+/* Movie card base styles */
+.movie-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth animation */
+    overflow: hidden;
+    /* Ensure zoom doesn’t overflow */
+    border-radius: 10px;
+    /* Slight roundness */
+}
+
+/* Hover zoom & shadow effect for cards */
+.movie-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    /* Lift + slight zoom */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    /* Stronger shadow */
+}
+
+/* Smooth zoom effect on posters */
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Extra zoom on poster when hovering the card */
+.movie-card:hover img {
+    transform: scale(1.1);
+}
+
+/* ---------------------------- */
+/* RESPONSIVE IMPROVEMENTS      */
+/* ---------------------------- */
+
+/* Medium screens (tablet) */
+@media (max-width: 992px) {
+    .heading {
+        font-size: 3rem;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.4rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2rem;
+    }
+}
